@@ -1,0 +1,72 @@
+--- Page 1 ---
+OWASP PTK Security Report
+Website Vulnerability Scanner Report
+www.technovaworld.com
+General Information
+Technology Stack
+Name Version Category
+Google Font API Font scripts
+Bootstrap 3.4.1 UI frameworks
+jQuery 3.7.1 JavaScript libraries
+jQuery UI 1.14.1 JavaScript libraries
+HSTS Security
+nopCommerce Ecommerce
+Zoho CRM
+Microsoft ASP.NET Web frameworks
+Google Analytics GA4 Analytics
+Zoho PageSense A/B Testing, Personalisation
+FortiWeb (Fortinet) WAF
+OWASP Secure Headers
+Header
+CSP allows inline/eval or wildcards in script/style
+CSP 'frame-ancestors' missing or overly broad
+HSTS max-age too low or missing includeSubDomains
+X-Frame-Options header is a legacy directive
+X-XSS-Protection header is a legacy directive
+Session Storage
+Key Value
+__darkreader__imageDetails {"src":"https://www.technovaworld.com/Themes/Technova/Content/images/about_bg.jpg","
+_v2_https://www.technovawo dataURL":"","width":2740,"height":705,"useViewBox":false,"isDark":false,"isLight":true,"isTr
+rld.com/Themes/Technova/C ansparent":false,"isLarge":true}
+ontent/images/about_bg.jpg
+__darkreader__imageDetails {"src":"https://www.technovaworld.com/Themes/Technova/Content/css/jquery-ui-themes/s
+_v2_https://www.technovawo moothness/images/ui-bg_flat_75_ffffff_40x100.png","dataURL":"data:image/png;base64,i
+rld.com/Themes/Technova/C VBORw0KGgoAAAANSUhEUgAAACgAAABkAQAAAADcH0/XAAAAAmJLR0QAAd2KE6
+ontent/css/jquery-ui-themes/sQAAAAJcEhZcwAAAEgAAABIAEbJaz4AAAASSURBVCjPY/gPAgyj5ChJVRIAypHyHLPb
+moothness/images/ui-bg_flat LnsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTMtMTAtMjBUMTk6NTU6MjMtMDc6MDBH/
+_75_ffffff_40x100.png RPSAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDEzLT...
+__darkreader__imageDetails {"src":"https://www.technovaworld.com/Themes/Technova/Content/images/load-indicator.
+_v2_https://www.technovawo gif","dataURL":"data:image/gif;base64,R0lGODlhLAEsAee+AAAAAOdSOedYP+daQ+hiT
+rld.com/Themes/Technova/C OlqVOlwXOp4ZeuAbuyHduyMfO2Sg/+WHO2Xif6aJQSc2/6cK++ekAuf3P6fMBCg3P6hN
+ontent/images/load-indicator. Bij3e+kl/2kPSCm3v2mQimp3/2pR/Crn/yrTPyuVPGwpfyyXPKzqfy1ZFG45PK4rvu5bPK7sl
+gif y95fu9dUG+zvzAe2jB5vTCuVTE0vvFhl3G1HjI6WXJ1WvL1/vLk4LMM4LM6v/MJ/vNmHT
+O2YfOO4nOPvbOx4vPQ4vP633Q247...
+__darkreader__wasEnabled true
+ForHost
+__darkreader__imageDetails {"src":"https://www.technovaworld.com/Plugins/Widgets.NivoSlider/Content/nivoslider/the
+_v2_https://www.technovawo mes/custom/loading.gif","dataURL":"data:image/gif;base64,R0lGODlhIAAgALsAAP///9bW
+rld.com/Plugins/Widgets.Nivo1rq6upeXl4GBgeHh4cTExPLy8rOzs1RUVAAAAAAAAAAAAAAAAAAAAAAAACH/C05FV
+Slider/Content/nivoslider/the FNDQVBFMi4wAwEAAAAh+QQFCgAAACwAAAAAIAAgAAAEyBDISakhpurNJ/lVcXRaIF
+mes/custom/loading.gif QfQQUsSR0fQqXTwQbu/OESLd2F3ETwGXhAgMJNSBl8TgAfkDkJEJyjTyK5nCgDwd9gk
+Jkgnhpl7QaeGMZjnrXcYbea8HHYZd+v8...
+OWASP PTK - www.technovaworld.com - 2026-02-06 20:24 - Page 1/2
+
+--- Page 2 ---
+Key Value
+__darkreader__imageDetails ["https://www.technovaworld.com/Plugins/Widgets.NivoSlider/Content/nivoslider/themes/c
+_v2_list ustom/loading.gif","https://www.technovaworld.com/Themes/Technova/Content/images/lo
+ad-indicator.gif","https://www.technovaworld.com/Themes/Technova/Content/images/abou
+t_bg.jpg","https://www.technovaworld.com/Themes/Technova/Content/css/jquery-ui-theme
+s/smoothness/images/ui-bg_flat_75_ffffff_40x100.png","https:...
+__darkreader__imageDetails {"src":"https://www.technovaworld.com/Plugins/Widgets.NivoSlider/Content/nivoslider/the
+_v2_https://www.technovawo mes/custom/arrows.png","dataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUh
+rld.com/Plugins/Widgets.NivoEUgAAAFAAAAA8CAYAAADxJz2MAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZ
+Slider/Content/nivoslider/the VJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBi
+mes/custom/arrows.png ZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEg
+eG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIH...
+Report generated using OWASP PTK scanning engines. Results depend on scan coverage and target
+responsiveness.
+Scope: N/A
+Limitations: Results depend on available routes and auth context; some flows may not be covered.
+OWASP PTK - www.technovaworld.com - 2026-02-06 20:24 - Page 2/2
+
