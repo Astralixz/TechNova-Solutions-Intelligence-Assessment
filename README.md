@@ -1,5 +1,7 @@
 # OSINT Case Study - TechNova Solutions Intelligence Assessment
 
+![Banner](banner.png)
+
 ![OSINT Case Study]
 
 ---
