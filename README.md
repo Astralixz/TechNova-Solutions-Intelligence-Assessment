@@ -1,6 +1,6 @@
 # OSINT Case Study - TechNova Solutions Intelligence Assessment
 
-![OSINT Case Study]
+![OSINT Case Study](OSINT%20Case%20Study%20-%20TechNova%20Solutions%20(Enhanced).png)
 
 ---
 
@@ -27,37 +27,112 @@ This OSINT case study presents a comprehensive intelligence assessment of TechNo
 
 Methodology
 
-Open Source Intelligence (OSINT) Methods Used:
+This section details the specific techniques, tools, and processes used to gather intelligence on TechNova Solutions through open source methods.
 
-1. **DNS Reconnaissance**
-   - Subdomain enumeration
-   - Public DNS record analysis
-   - IP address and ASN identification
+DNS Reconnaissance
 
-2. **Public Records Research**
-   - WHOIS data analysis
-   - Public domain registration records
-   - Publicly accessible company information
+The initial phase involved DNS enumeration to discover the company's digital infrastructure. I started with the primary domain technovaworld.com and performed subdomain enumeration using multiple techniques:
 
-3. **Professional Network Analysis**
-   - Public LinkedIn profile research
-   - Public company pages
-   - Professional network mapping
+- **Subdomain Enumeration Tools:** Used tools like sublist3r, amass, and manual DNS queries to discover subdomains
+- **Certificate Transparency Logs:** Searched public CT logs for SSL certificates issued to subdomains, which revealed odoo17.technovasolutions.io
+- **DNS Zone Transfers:** Attempted zone transfers (unsuccessful, as expected for properly configured DNS)
+- **Brute Force Enumeration:** Used wordlists to test common subdomain patterns (demo, test, staging, admin, etc.)
+- **Passive DNS Analysis:** Queried passive DNS databases to find historical subdomain records
 
-4. **Infrastructure Analysis**
-   - Public SSL certificate analysis
-   - Public hosting provider identification
-   - Technology stack identification from public headers
+For each discovered subdomain, I performed:
+- DNS A record lookups to get IP addresses
+- Reverse DNS lookups (PTR records) to identify hostnames
+- ASN lookups to determine hosting provider and network ownership
+- TTL analysis to understand DNS configuration patterns
 
-5. **Public Website Analysis**
-   - Publicly accessible website content
-   - Public documentation review
-   - Public API endpoint discovery
+This process revealed four subdomains: demo, nms, odoo17, and wap, all pointing to Hetzner infrastructure in Germany.
 
-6. **Security Assessment**
-   - OWASP PTK automated security scanning
-   - Technology stack fingerprinting
-   - Security headers analysis
+Public Records Research
+
+I gathered publicly available registration and business information through:
+
+- **WHOIS Queries:** Performed WHOIS lookups on all three domains (technovaworld.com, technovaindia.com, technovasolutions.io) to get registration dates, registrars, and contact information
+- **Domain Registration Databases:** Searched public domain registration databases for historical ownership records
+- **Business Registration:** Looked for public business registration records (though limited information available for private companies in India)
+- **Public Company Databases:** Searched business intelligence platforms and company directories for revenue estimates and employee counts
+
+The WHOIS data revealed domain registration patterns and helped confirm the relationship between the different domains. The business databases provided estimates on company size and revenue ranges.
+
+Professional Network Analysis
+
+LinkedIn and professional networks were a key source for leadership and organizational information:
+
+- **LinkedIn Profile Research:** Searched for "TechNova" and individual executive names to find public profiles
+- **Company Page Analysis:** Reviewed TechNova's LinkedIn company page (if available) for employee information and company updates
+- **Profile Content Analysis:** Extracted information from public profile sections including:
+  - Job titles and position history
+  - Education background
+  - Company connections
+  - Professional network connections
+- **Profile URL Patterns:** Identified LinkedIn profile URLs which can reveal profile creation dates and activity
+
+This revealed the CEO and CFO/CTO profiles, their educational backgrounds, and position history showing the COO to CEO promotion timeline.
+
+Infrastructure Analysis
+
+Technical infrastructure was analyzed through multiple passive techniques:
+
+- **SSL Certificate Analysis:** Downloaded and analyzed SSL certificates from discovered subdomains to identify:
+  - Certificate subject alternative names (SANs) revealing additional subdomains
+  - Certificate issuer information
+  - Certificate validity periods
+- **HTTP Headers Analysis:** Made HTTP requests to websites and analyzed response headers to identify:
+  - Web server software (revealed ASP.NET)
+  - Security headers configuration
+  - Technology stack indicators
+- **Banner Grabbing:** Captured service banners from exposed services to identify software versions
+- **IP Geolocation:** Used IP geolocation databases to determine server locations (confirmed Germany)
+- **ASN Research:** Looked up ASN 24940 (HETZNER-AS) to identify the hosting provider and understand their service offerings
+
+The infrastructure analysis revealed the hosting provider (Hetzner), server locations, and key technology components like the Odoo ERP system.
+
+Public Website Analysis
+
+I performed comprehensive analysis of the publicly accessible websites:
+
+- **Website Content Scraping:** Used tools like wget and curl to download publicly accessible pages
+- **HTML Source Analysis:** Examined HTML source code for:
+  - JavaScript library references (revealed jQuery, Bootstrap versions)
+  - Third-party service integrations (Google Analytics, Zoho services)
+  - Comment sections that might reveal technical details
+- **Robots.txt Analysis:** Checked robots.txt files for hidden directories or restricted areas
+- **Sitemap Analysis:** Reviewed XML sitemaps to understand site structure
+- **Form Analysis:** Identified contact forms and submission endpoints
+- **API Endpoint Discovery:** Looked for exposed API endpoints in JavaScript files and network requests
+
+This analysis revealed the technology stack including nopCommerce, Zoho integrations, and various third-party services.
+
+Security Assessment
+
+For the security assessment of technovaworld.com, I used:
+
+- **OWASP PTK (Pentesting Toolkit):** Ran automated security scanning using OWASP PTK which performed:
+  - Technology stack fingerprinting
+  - Security headers analysis
+  - Session storage inspection
+  - Cookie analysis
+- **Manual Header Inspection:** Manually verified security headers using browser developer tools and curl commands
+- **Security Headers Testing:** Used online tools and manual testing to verify:
+  - Content Security Policy (CSP) configuration
+  - HSTS implementation
+  - X-Frame-Options and other legacy headers
+- **WAF Detection:** Identified FortiWeb WAF through HTTP response headers and behavior analysis
+
+The PTK scan generated a detailed report showing the technology stack, security headers configuration, and identified security concerns.
+
+Additional Techniques
+
+- **Google Dorking:** Used specific Google search queries to find publicly indexed information about the company
+- **Social Media Analysis:** Checked public social media profiles for additional context
+- **Email Pattern Analysis:** Identified email addresses through website contact pages and public sources, then inferred additional addresses based on naming patterns
+- **Network Mapping:** Created a network map of discovered infrastructure components and their relationships
+
+All techniques used were passive and non-intrusive, relying only on publicly available information that anyone with internet access could gather. No authentication bypass, exploitation, or unauthorized access was attempted or required.
 
 ---
 
